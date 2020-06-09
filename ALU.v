@@ -37,13 +37,13 @@ case(ALU_ctrl)
 	4'd5:   r0_dum = r1 ^ r2; // EX-OR
 	4'd6:   r0_dum = ~r1; // NOT
 	4'd7: if ( r1 > r2 ) // CMP
-				cmp = 2'b10;
-			else if ( r1 < r2 )
-				cmp = 2'b01;
-			else if ( r1 == r2 )
-				cmp = 2'b00;
-			else 
-				cmp = 2'b11;
+			cmp = 2'b10;
+		else if ( r1 < r2 )
+			cmp = 2'b01;
+		else if ( r1 == r2 )
+			cmp = 2'b00;
+		else 
+			cmp = 2'b11;
 	4'd8: r0_dum = r1 | r2; // MOVI
 	4'd9: r0_dum = 33'b0; // JUMP
 	4'd10: r0_dum = r1 + r2; // JC
@@ -55,7 +55,7 @@ if (r0_dum)
 else 
 	zero = 1;
 
-	assign flag = {r0_dum[32],zero};  // flag = {carry,zero}
+assign flag = {r0_dum[32],zero};  // flag = {carry,zero}
 assign r0 = r0_dum[31:0];
 
 end
