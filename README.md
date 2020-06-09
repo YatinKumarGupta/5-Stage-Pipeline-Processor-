@@ -3,6 +3,7 @@ We have designed a 5 Stage Pipeline Processor based on the MIPS architecture
 
 
 We have designed 19 instructions which are mentioned below:
+
 ADD
 SUB
 AND
