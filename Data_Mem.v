@@ -24,10 +24,10 @@ input [8:0] ctrl_sig;
 input CLK;
 output reg[31:0] Read_data;
 reg [31:0]Mem[31:0];
-always@(negedge CLK) 
-	if(ctrl_sig[4])
-		Read_data = Mem[Address];
-always@(posedge CLK)
-	if(ctrl_sig[3])
-		Mem[Address] = Write_data;
+always@(negedge CLK) //at every negative edge of clock
+	if(ctrl_sig[4])// if MemRead is high
+		Read_data = Mem[Address];// an address from memory is loaded to 'Read_data'
+always@(posedge CLK) // at every positive edge of clock
+	if(ctrl_sig[3]) // if MemWrite is high
+		Mem[Address] = Write_data;// a data is stored in the memory
 endmodule
