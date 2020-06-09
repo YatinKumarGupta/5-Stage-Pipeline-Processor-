@@ -25,17 +25,17 @@ output reg [1:0] ForA,ForB;
 always@(*)
 begin
 	if(rs == mem_rd)
-		ForA = 2'b10;
+		ForA = 2'b10; // First ALU operand is forwarded from prior ALU result
 	else if(rs == wb_rd)
-		ForA = 2'b01;
+		ForA = 2'b01; // First ALU operand is forwarded from the Data Memory or earlier ALU result
 	else
-		ForA = 2'b00;
+		ForA = 2'b00; // First ALU operand comes from the register file
 
 	if(rt == mem_rd)
-		ForB = 2'b10;
+		ForB = 2'b10; // Second ALU operand is forwarded from prior ALU result
 	else if(rt == wb_rd)
-		ForB = 2'b01;
+		ForB = 2'b01; // Second ALU operand is forwarded from the Data Memory or earlier ALU result
 	else
-		ForB = 2'b00;
+		ForB = 2'b00; // Second ALU operand comes from the register file
 end
 endmodule
