@@ -33,7 +33,7 @@ always@(clk)
 begin
 	if(clk)
 	begin 
-		if(flush)
+		if(flush)  // Data Flush during jump
 		begin
 			Read_data1 <= 32'bx;
 			Read_data2 <= 32'bx;
