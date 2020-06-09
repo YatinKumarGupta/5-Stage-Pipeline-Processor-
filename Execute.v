@@ -36,5 +36,5 @@ mux_4x1 m2(Read_data2,mem_wb_data,ex_mem_data,ForB,x2); // Mux for selecting the
 ALU_control A1(funcy,ctrl_sig[1:0],ALU_ctrl);
 assign r2 = ctrl_sig[7] ? im_ext : x2;  
 ALU A2(ALU_ctrl,x1,r2,alu_result,flag,cmp);
-  Branch B1(ALU_ctrl,im_addr1,im_ext,pc_exe,ctrl_sig[2],{ctrl_sig[1],ctrl_sig[0]},flag,br_pc,br); 
+Branch B1(ALU_ctrl,im_addr1,im_ext,pc_exe,ctrl_sig[2],{ctrl_sig[1],ctrl_sig[0]},flag,br_pc,br); 
 endmodule
