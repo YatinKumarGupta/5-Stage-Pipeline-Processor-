@@ -23,7 +23,7 @@ input clk,w_en;
 input [4:0] rs1,rs2,rd;
 input [31:0] d_in;
 output reg [31:0] r1,r2;
-reg [31:0] bank [31:0]; 
+reg [31:0] bank [31:0]; // 128 Byte Data Memory
 
 initial begin
 	bank[0] <= 32'd0;
