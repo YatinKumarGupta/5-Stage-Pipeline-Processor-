@@ -27,14 +27,14 @@ always@(clk)
 begin
 	if(clk)
 	begin 
-		if(flush)
+		if(flush)	// if branch is taken then data will be flush out from latch
 		begin
 				ins_out = 32'bx;
 				pc_out = 32'bx;
 		end
 		else
 		begin
-			ins_out <= ins;
+			ins_out <= ins;	
 			pc_out <= pc_in;
 		end
 	end
