@@ -51,19 +51,4 @@ case(ALU_Op)
 			ALU_ctrl = 4'd9; 
 endcase
 end
-
-// ADD,ADDI   	1   
-// AND,ANDI	  	3
-// SUB 		  	2
-// OR,ORI	  	4
-// XOR,XORI	  	5
-// MOV,MOVI		8
-// NOT			6
-// CMP			7
-// LW				12
-// SW				13
-// JUMP			9
-// JC				10
-// JZ				11
-// NOP			0
 endmodule
