@@ -25,7 +25,7 @@ input br;
 output reg [31:0] pc;
 output reg [31:0] ins;
 reg count;
-reg [31:0] instr_mem[31:0]; 
+reg [31:0] instr_mem[31:0];   // 128 Byte Instruction Memory 
 initial begin
 	pc = 0;
 	count = 0;
@@ -43,11 +43,11 @@ end
 
 always@(posedge clk)begin
 	if(br)
-		pc = br_pc;
+		pc = br_pc;  // Jump to branch address
 	else
 	begin 
 		if(count)
-			pc = pc + 32'd1;
+			pc = pc + 32'd1; // PC = PC + 1
 		else
 			count = 1;
 	end
