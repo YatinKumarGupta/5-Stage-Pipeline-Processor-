@@ -48,8 +48,8 @@ always@(*)
 	else
 	begin
 // Register Access Stage
-	r1 <= bank[rs1];
-	r2 <= bank[rs2];
+		r1 <= bank[rs1];
+		r2 <= bank[rs2];
 	end
 	
 endmodule
