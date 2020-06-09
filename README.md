@@ -1,4 +1,4 @@
-# 5-Stage-Pipeline-Processor-
+# 5-Stage-Pipeline-Processor
 We have designed a 5 Stage Pipeline Processor based on the MIPS architecture
 
 
