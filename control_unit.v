@@ -29,56 +29,56 @@ begin
 	end
 	
 	// I-type
-	else if(opcode == 6'b001000) //ADDI	001000
+	else if(opcode == 6'b001000) //ADDI	
 	begin
 		control_sig =	9'b_0_1_0_1_0_0_0_00;														
 	end
 	
-	else if(opcode == 6'b001100) //ANDI	001100
+	else if(opcode == 6'b001100) //ANDI	
 	begin
 		control_sig =	9'b_0_1_0_1_0_0_0_00;														
 	end
 	
-	else if(opcode == 6'b001101) //ORI		001101
+	else if(opcode == 6'b001101) //ORI		
 	begin
 		control_sig =	9'b_0_1_0_1_0_0_0_00;														
 	end						
 	
-	else if(opcode == 6'b001110) //XORI	001110
+	else if(opcode == 6'b001110) //XORI	
 	begin
 		control_sig =	9'b_0_1_0_1_0_0_0_00;														
 	end						
 	
-	else if(opcode == 6'b001001) //MOVI	001001
+	else if(opcode == 6'b001001) //MOVI	
 	begin
 		control_sig =	9'b_0_1_0_1_0_0_0_00;														
 	end						
 	
-	else if(opcode == 6'b000010) //JUMP	000010
+	else if(opcode == 6'b000010) //JUMP	
 	begin
 		control_sig =	9'b_x_0_0_0_0_0_1_11;														
 	end					
 	
-	else if(opcode == 6'b000011) //JC		000011
+	else if(opcode == 6'b000011) //JC		
 	begin
 		control_sig =	9'b_x_0_0_0_0_0_1_00;
 	end						
 	
-	else if(opcode == 6'b000100) //JZ		000100
+	else if(opcode == 6'b000100) //JZ		
 	begin
 		control_sig =	9'b_x_0_0_0_0_0_1_00;														
 	end						
 	
-	else if(opcode == 6'b100011) //LW		100011
+	else if(opcode == 6'b100011) //LW		
 	begin
 		control_sig =	9'b_0_1_1_1_1_0_0_00;														
 	end	
 
-	else if(opcode == 6'b101011) //SW		101011
+	else if(opcode == 6'b101011) //SW		
 	begin
 		control_sig =	9'b_x_1_x_0_0_1_0_00;														
 	end
 	else
-		control_sig =	9'b_x_x_x_x_x_x_x_xx;
+		control_sig =	9'b_x_x_x_x_x_x_x_xx;	// if an unknown opcode comes
 end
 endmodule
