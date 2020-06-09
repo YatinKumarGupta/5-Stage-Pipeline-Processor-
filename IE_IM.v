@@ -27,11 +27,11 @@ output reg [8:0] ctrl_sig;
 output reg [31:0] Address,Write_data;
 output reg [4:0] rd;
 always@(clk)
-	if(clk)
+	if(clk) // at positive level triggering of clock
 	begin
-		Address <= ALU_result;
-		Write_data <= Read_data2;
-		ctrl_sig <= ctrl_sig_in;
-		rd <= rd_in;
+		Address <= ALU_result; //Result from ALU is assigned to a variable ADDRESS
+		Write_data <= Read_data2; // incoming data for operand 2 is assigned to write_data variable
+		ctrl_sig <= ctrl_sig_in; // input control signal is passes as it is to next stage
+		rd <= rd_in;  // input destination register value is passed as it is to next stage
 	end
 endmodule
