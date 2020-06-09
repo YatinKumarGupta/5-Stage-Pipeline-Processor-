@@ -25,10 +25,10 @@ output reg [31:0] out;
 always@(*)
 begin
 	case(sel)
-		2'b00: out = a;
-		2'b01: out = b;
-		2'b10: out = c;
-		default: out = 32'bx;
+		2'b00: out = a;		//input to alu will be operand from register file
+		2'b01: out = b;		//input to alu will be data from memory_writeback latch
+		2'b10: out = c;		//input to alu will be data from execution_memory latch
+		default: out = 32'bx;	// if no forwarding is needed 
 	endcase
 end	
 endmodule
