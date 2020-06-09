@@ -33,7 +33,7 @@ always@(clk)
 begin
 	if(clk)
 	begin 
-		if(flush)  // Data Flush during jump
+		if(flush)  // if branch is taken then data will be flushed out from the latch
 		begin
 			Read_data1 <= 32'bx;
 			Read_data2 <= 32'bx;
